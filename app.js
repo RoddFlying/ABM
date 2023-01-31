@@ -5,6 +5,8 @@ const path = require("path");
 const methodOverride = require('method-override');
 const session = require('express-session');
 
+const {sequelize} = require ('./database/models') 
+sequelize.sync({alter:false}).then(()=> console.log ('ModeloSincronizados'));
 
 //EXPRESS
 
@@ -31,11 +33,29 @@ app.use(session({
 }));
 
 
+//API
+
+const apiRoutes = require('./routes/apiRouter')
+app.use('/', apiRoutes)
+
+//ROUTES
+
+const userRouter = require('./src/routes/userRouter');
+
+app.use('/user', userRouter); 
+
+const publicPath = path.resolve(__dirname, './public');
+app.use( express.static(publicPath));
+
+app.use(methodOverride ("_method")); 
 
 //EJS 
 
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, '/views'));
+
+
+
 
 //ERROR
 
