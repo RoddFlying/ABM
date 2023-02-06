@@ -1,0 +1,81 @@
+/* TIPOGRAFIAS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap'); /* Font Roboto bold 900 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); /* Font Roboto thin */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Font roboto regular */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* Lobster font-family: 'Lobster', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /*lato regular font-family: 'Lato', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'); /*lato bold*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'); /*lato thin*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'); /*Garamond regular font-family: 'Cormorant Garamond', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');/*Garamond italic*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap'); /*garamond Bold*/
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap'); /*Zilla Slab regular font-family: 'Zilla Slab', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap'); /*Zilla Slab hilighted font-family: 'Zilla Slab Highlight', cursive;*/
+
+    :root {
+     --dark-olive-green : #5a6b47;
+     --black : #000000;
+     --artichoke : #a1a48f;
+     --tan: #dabf94;
+     --cafe-noir :#3f3222;
+     --white : #ffffff;
+    }
+
+
+
+.main-products{
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  align-items: center;
+  display: block;
+  background-color: #a1a48f;
+}
+
+.main-products .products{
+    width: 90%; /*seccion main*/
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+
+}
+.main-products .products a{
+    text-decoration: none;
+    color: #000000;
+    margin-top: 30px;
+    width: 90%;
+}
+.main-products .products article{
+    width: 90%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 2px grey;
+}
+.main-products .products article img{
+    width: 100%;
+    margin: auto;
+}
+
+@media (max-width: 1023px){
+    .main-products .products{
+        width: 90%; /*seccion main*/
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+    }
+  
+  }
+  
+  /*VERSION MOBILE*/
+  @media (max-width: 767px){
+    .main-products .products{
+        width: 90%; /*seccion main*/
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+    
+  }
+  
+  

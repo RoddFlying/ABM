@@ -30,6 +30,6 @@ list: (req, res) => {
         count: listaUsuarios.length
     
       })}) 
-  },
+  }
 
-module.exports = userController;
+//module.exports = userController;

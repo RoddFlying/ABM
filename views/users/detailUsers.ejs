@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- INCLUDES HEAD-->
+<%- include('../partials/head') %>
+
+<body>
+    <!-- INCLUDES HEADER-->
+    <!-- <div class="headingLogoDetail">
+        <a href="/"><img src="/img/logoGHboceto.png" alt="" class="logo"><a>
+    </div> -->
+    <header>
+        <!-- <div class="searchBar">
+        
+            <i class="fa-sharp fa-solid fa-magnifying-glass fa-2x"></i>
+            <input type="text" placeholder="Buscar productos, servicios, más..">
+        </div> -->
+        <div class="headingLogo">
+            <a href="/"><img src="/img/logoGHboceto.png" alt="" class="logo"><a>
+        </div>
+       
+        <nav class="nav-bar">
+            <ul class="menuPrincipal">
+                <li><a href="/products">PRODUCTOS</a></li>             
+                <li> <a href="/user"><i class="fa-sharp fa-solid fa-user fa-2x"></i></a></li>
+                <li><a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i></a> </li>
+            </ul>
+        </nav>
+        <div class="mobile-nav-bar">
+            <a href="/products"><i class="fa-sharp fa-solid fa-bars"></i> </a>
+            <a href="/user"><i class="fa-sharp fa-solid fa-user fa-2x"></i></a>
+            <a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i></a>
+        </div>
+    
+   
+</header>
+<main>
+    <section class="mainDetailProducts">
+    <section class="product">
+        <div class="barratop">
+        <div class="productTitle">
+            <h2 name="name" id="name"><%= producto.name %></h2>
+            <p></p>
+            <p class="productTitleCreator"><%= producto.brand %></p>
+        </div>
+        <div class="productAdd">
+            <!-- <div class="masMenos">
+                <button>+</button>
+                icon favorite, add product, cart<h3>1</h3>
+                <button>-</button>
+            </div> -->
+            <div> <!--HELP!!!!!!!-->
+                <button id="agregarcarrito" >AGREGAR A CARRITO</button>
+                <button><i class="fa-regular fa-heart"></i></button> 
+            </div>
+            
+            
+        </div>
+    </div>
+     <div class="productSpec">
+            <img src="/img/products/<%= producto.image %>" name="image" alt="image-product" id="image">
+            <div class="productSpecInfo">
+                <div class="product-price">
+                    <h3 class="price" name="price" id="price">$<%= producto.price %></h3>
+                    <% if (producto.discount !== 0) { %>
+                      <h3 class="discount" name="discount" id="discount"><%= producto.discount %>  % OFF</h3>
+                      <h3 name="finalprice" >$ <span id="finalprice"> <%= producto.price - (producto.price * producto.discount / 100) %></span></h3>
+                    <% } %>
+                  </div>
+                <p><%= producto.detail %></p>
+            </div>
+        </div>
+
+
+    </section>
+    <section>
+      
+    </section>
+
+
+
+
+
+</section>
+</main>
+ <!-- INCLUDES FOOTER-->
+<%- include('../partials/footer') %>
+<script src="/js/addItemCart.js"></script>
+
+</body>
+</html>
